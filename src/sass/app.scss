@@ -1,0 +1,26 @@
+@import "tailwind";
+
+@import "abstract/variable";
+@import "abstract/base";
+@import "abstract/reset";
+@import "abstract/mixin";
+@import "abstract/animations";
+@import "abstract/typography";
+
+@import "components/arrow";
+@import "components/header";
+@import "components/form";
+@import "components/dropdown";
+@import "components/table";
+@import "components/card";
+@import "components/buttons";
+@import "components/searchbar";
+@import "components/slick";
+
+@import "pages/home/banner";
+@import "pages/home/services";
+@import "pages/home/testimonial";
+
+@import "vendor/vendor";
+
+

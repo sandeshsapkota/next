@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Mukta:wght@300;400;500;600;700&family=Roboto:wght@100&display=swap');
+
+body {
+  font: 400 16px/1.3 'Mukta', sans-serif;
+  //font: 400 16px/1.3 'Inter', sans-serif;
+  color: var(--color-grey-700);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.header-height-padding {
+  padding-top: var(--header-height);
+}
+
+.header-height-deduct {
+  min-height: calc(100vh - var(--header-height));
+}
+
+.header-footer-height-deduct {
+  min-height: calc(100vh - calc(var(--header-height) + var(--footer-height)));
+}
+
+
+.container {
+  max-width: 1112px;
+  @apply px-4 mx-auto w-full
+}
+
+.pos-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.m-h-screen {
+  min-height: 100vh;
+}
+
+.transition-3s {
+  transition: .3s all;
+}
+
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+.svg-icon {
+  height: 14px;
+  width: 14px;
+  fill: currentColor;
+}

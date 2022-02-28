@@ -1,0 +1,9 @@
+.btn-link {
+  svg {
+    transition: .3s;
+  }
+
+  &:hover svg {
+    transform: translateX(6px);
+  }
+}

@@ -1,0 +1,112 @@
+.slick-slide{
+  cursor: pointer;
+}
+
+.banner .slick-slide.slick-active:before {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+  z-index: 12;
+  width: 100%;
+  height: 100%;
+}
+
+
+.slick-list li {
+  position: relative;
+  width: 30px;
+  height: 3px;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, .5);
+  z-index: 999;
+}
+
+
+.slick-track {
+  display: flex;
+  align-items: center;
+}
+
+.slick-arrow {
+  position: absolute;
+  top: calc(50% - 12px);
+  width: 24px;
+  height: 24px;
+  right: 16px;
+  z-index: 9;
+  color: white;
+  font-size: 0;
+  opacity: .8;
+  transition: .2s;
+
+  &:hover {
+    opacity: 1;
+  }
+
+
+  @extend .arrow;
+  @extend .arrow-bar;
+
+  &:before {
+    transform: rotate(-45deg) translateY(-19px) translateX(0px)
+  }
+
+  &.slick-prev {
+    left: 24px;
+    @extend .is-left;
+  }
+
+  &.slick-next {
+    right: 24px;
+    @extend .is-right;
+  }
+
+  &:hover {
+    color: var(--color-primary-200);
+  }
+}
+
+.slick-slider {
+  &.slick-initialized {
+    display: block;
+  }
+}
+
+.slick-dots {
+  display: flex !important;
+  @extend .container;
+
+  width: 100%;
+  gap: 8px;
+  font-size: 0;
+  position: relative;
+  bottom: 40px;
+  z-index: 9999;
+  text-align: center;
+  background: transparent;
+
+  button {
+    background: white;
+    height: 3px;
+    width: 24px;
+  }
+
+  li.slick-active button {
+    background: var(--color-primary-600);
+  }
+}
+
+@keyframes zoomInImage {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+  to {
+    transform: scale3d(1.1, 1.1, 1.1);
+
+  }
+}

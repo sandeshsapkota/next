@@ -1,0 +1,14 @@
+.logo svg{
+  width: 132px;
+  height: 40px;
+}
+
+.arrow-dropdown{
+  margin: -2px 0 0 6px;
+  @include arrow(8px,1px,8px,8px);
+  @include arrowColor(white);
+}
+
+.logo{
+  background: red;
+}

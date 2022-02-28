@@ -1,0 +1,34 @@
+.banner {
+  &__title {
+    font-size: 44px;
+    transition: .3s .1s ease-in-out;
+    transform: translateY(4px);
+  }
+
+  &__desc {
+    transition: .3s .4s linear;
+    font-size: 21px;
+    transform: translateY(8px);
+    line-height: 1.5;
+  }
+
+  &__title, &__desc {
+    opacity: 0;
+  }
+
+  .slick-active {
+    .banner__title, .banner__desc {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+
+  .slick-active img {
+    animation-name: zoomInImage;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    transition: all 1s ease-in-out;
+  }
+
+}

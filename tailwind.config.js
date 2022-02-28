@@ -1,0 +1,48 @@
+module.exports = {
+    content: ["./pages/**/*.{js,ts,jsx,tsx}",
+        "./src/components/**/*.{js,ts,jsx,tsx}",],
+    theme: {
+        extend: {
+            colors: {
+                black: '#000',
+                white: '#fff',
+                primary: {
+                    100: "var(--color-primary-100)",
+                    200: "var(--color-primary-200)",
+                    300: "var(--color-primary-300)",
+                    400: "var(--color-primary-400)",
+                    500: "var(--color-primary-500)",
+                    600: "var(--color-primary-600)",
+                    700: "var(--color-primary-700)",
+                    800: "var(--color-primary-800)",
+                    900: "var(--color-primary-900)",
+                    1000: "var(--color-primary-1000)",
+                    1100: "var(--color-primary-1100)",
+                },
+                secondary: {
+                    100: "var(--color-secondary-100)",
+                    200: "var(--color-secondary-200)",
+                    300: "var(--color-secondary-300)",
+                    400: "var(--color-secondary-400)",
+                    500: "var(--color-secondary-500)",
+                    600: "var(--color-secondary-600)",
+                    700: "var(--color-secondary-700)",
+                },
+                grey: {
+                    100: "var(--color-grey-100)",
+                    200: "var(--color-grey-200)",
+                    300: "var(--color-grey-300)",
+                    400: "var(--color-grey-400)",
+                    500: "var(--color-grey-500)",
+                    600: "var(--color-grey-600)",
+                    700: "var(--color-grey-700)",
+                    800: "var(--color-grey-800)",
+                    900: "var(--color-grey-900)",
+                    1000: "var(--color-grey-1000)",
+                    1100: "var(--color-grey-1100)",
+                },
+            },
+        },
+    },
+    plugins: [],
+}

@@ -1,0 +1,20 @@
+.service {
+  .card {
+    //background: transparent;
+    //color: white;
+    cursor: default;
+  }
+
+  .heading-primary {
+    //color: inherit;
+  }
+
+  .card:hover {
+    background: rgba(255,255,255,.8);;
+    //color: var(--color-grey-1000);
+
+    .heading-primary {
+      color: var(--color-primary-600);
+    }
+  }
+}

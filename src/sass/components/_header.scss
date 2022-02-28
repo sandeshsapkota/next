@@ -1,0 +1,116 @@
+.logo svg {
+  width: 132px;
+  height: 40px;
+}
+
+.nav {
+
+  &__list {
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__link {
+    display: block;
+    padding: 24px 16px;
+    text-transform: capitalize;
+    font-size: 16px;
+
+    &:hover {
+      opacity: .7;
+    }
+
+    &.active-link{
+      color: var(--color-primary-600);
+      font-weight: bold;
+    }
+  }
+
+  &__dropdown .nav__link {
+    padding: 8px 12px;
+  }
+
+  &__dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 8px 0;
+    min-width: 180px;
+    background: #fff;
+    border-radius: 4px;
+    z-index: 99;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0 8px 80px 2px rgb(38 30 91 / 20%);
+
+    &:before{
+      content: '';
+      background: white;
+      @include arrow(12px, 2px, 2px, 20px);
+      @include rotate(225deg);
+      position: absolute;
+      top: -5px;
+      left: 18px;
+    }
+
+    & .nav__dropdown:before{
+      top: 12px;
+      left: -4px;
+    }
+
+
+    & & {
+      left: 100%;
+      top: 0;
+    }
+
+
+    &, &-parent .svg-icon {
+      @extend .transition-3s;
+    }
+  }
+
+  &__dropdown-parent {
+    position: relative;
+
+    &:hover {
+      > .nav__dropdown {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      > a {
+        opacity: .7;
+      }
+
+      > a svg {
+        transform: rotate(-180deg);
+      }
+    }
+
+    &:hover .nav__dropdown{
+      top: 80%;
+    }
+
+    & .nav__dropdown-parent .nav__dropdown{
+      left: 110%;
+      top: 0;
+    }
+
+    & .nav__dropdown-parent:hover .nav__dropdown{
+      left: 100%;
+    }
+  }
+}
+
+.arrow-dropdown {
+  margin: -2px 0 0 6px;
+  @include arrow(8px, 1px, 8px, 8px);
+  @include arrowColor(white);
+}
+
+.nav__link{
+  padding: 24px 4px;
+}
